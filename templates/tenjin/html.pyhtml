@@ -1,0 +1,10 @@
+
+<?py for p in products: ?>
+
+    <?py category = p['category_camel'] ?>
+    <div ng-app="freight_calculator" ng-controller="mainController">
+        [[ product_packaging.category ]]
+        <input ng-model="quantity"  type="number" ng-change="change_quantity()"/>
+        [[ dimensions ]]
+    </div>
+<?py #endfor ?>

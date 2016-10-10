@@ -1,0 +1,9 @@
+RACKING_DESCRIPTIONS = """
+{% for r in rows %}
+<tr>
+    <td>{{ r.x10 }}</td>
+    <td>{{ r.x100 }}</td>
+    <td>{{ r.x1000 }}</td>
+<tr>
+{% endfor %}
+"""

@@ -1,0 +1,7 @@
+
+<?py import json?>
+
+<?py products_packaging = json.dumps(products, sort_keys=True,indent=4, separators=(',', ': ')) ?>
+
+#{products_packaging}
+

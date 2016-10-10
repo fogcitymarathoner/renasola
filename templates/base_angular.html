@@ -1,0 +1,17 @@
+<!-- base_angular.html -->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <title>{{ settings.SITE_TITLE | safe }}</title>
+        {% include "snippets/bootstrap_common_header.html" %}
+        <!-- must follow bootstrap -->
+        {% include "snippets/common_header.html" %}
+        {% include "snippets/angular_common_header.html" %}
+        <!-- MUST FOLLOW Angular -->
+        <script src="{{ static_url | safe }}js/angular_myApp.js"></script>
+    </head>
+    <body>
+        {% block content %}
+        {% endblock content %}
+    </body>
+</html>

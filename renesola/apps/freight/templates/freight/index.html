@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- freight/index.html -->
+    <h1>UPS Rate Test</h1>
+     <form action="." method="post" >{% csrf_token %}
+         <table>
+            {{ form }}
+         </table>
+         <input type="submit" value="Calculate Rate" />
+     </form>
+    <h2>Results</h2>
+    <div><b>Cost</b> {{ cost }}</div>
+    <div>{{  results | safe }}</div>
+
+
+    <div>
+        <div id="freight-items"></div>
+        <div id="freight-items-non-scheduled"></div>
+
+        <div id="freight-calculator-datalists"></div>
+
+    </div>
+    <div id='calculate-freight-total'>
+        <button class='btn' >Calculate</button>
+    </div>
+    <script src="{{ static_url | safe }}js/freight_calculator.js"></script>
+{% endblock content %}

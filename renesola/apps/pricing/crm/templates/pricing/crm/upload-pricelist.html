@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- pricing/crm/upload-pricelist.html -->
+    <h1>Pricelist Uploader</h1>
+     <form action="." method="post" enctype="multipart/form-data">{% csrf_token %}
+         {{ form }}
+         <input type="submit" value="Upload" />
+     </form>
+{% endblock content %}

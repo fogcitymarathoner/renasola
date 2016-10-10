@@ -1,0 +1,9 @@
+#{% comment %}
+#{% endcomment %}
+
+# categories.coffee
+# DATA FILE
+CategoryList = {{ category_list | safe}}
+
+
+# NOTE - BLANK LINE BELOW NECESSARY

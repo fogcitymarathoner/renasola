@@ -1,0 +1,12 @@
+<!-- base_home.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>{{ settings.SITE_TITLE | safe }}</title>
+    {% include "snippets/common_header.html" %}
+</head>
+<body>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,9 @@
+
+<?py import json?>
+<?py products_packaging = json.dumps(products, sort_keys=True,indent=4, separators=(',', ': ')) ?>
+
+
+# categories.coffee
+# DATA FILE
+CategoryList = #{products_packaging}
+

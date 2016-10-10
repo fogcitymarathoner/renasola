@@ -1,0 +1,34 @@
+<!-- base_bootstrap.html -->
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+<head>
+    <title>{{ settings.SITE_TITLE | safe }}</title>
+    {% include "snippets/common_header.html" %}
+    {% include "snippets/angular_common_header.html" %}
+    <!-- MUST FOLLOW Angular -->
+    <script src="{{ static_url | safe }}js/angular_myApp.js"></script>
+    {% include "snippets/bootstrap_common_header.html" %}
+</head>
+
+
+<body class="container">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        {% include "snippets/bootstrap_page_header.html" %}
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-sm-3">{% include "snippets/bootstrap_nav_sidebar.html" %}</div>
+        <div class="col-sm-9">{% block content %}{% endblock content %}</div>
+      </div>
+    </div>
+
+    <footer>
+        {% include "snippets/bootstrap_page_footer.html" %}
+    </footer>
+</body>
+</html>

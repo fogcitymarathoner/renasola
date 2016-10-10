@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- pricing/crm/discount_calculator.html -->
+    <h1>Bundle Quotation Discount Calculator</h1>
+
+    <div id="discount-calculator">
+        <div id="discount-calculator-top-action-buttons" class="row col-md-12">
+            {% include "pricing/crm/_discount_calculator_top_actions.html" %}
+        </div>
+        <div id="discount-header-line" class="row col-md-12 table-header">&nbsp;</div>
+        <div id="discount-header-line-items" class="row col-md-12">{% include "pricing/crm/_top_header.html" %}</div>
+        <div id="discount-line-items" class="row col-md-12 discount-line-items-subtotalable"></div>
+        <div id="discount-racking-items" class="row col-md-12"></div>
+        <div id="discount-totals-results-line-items" class="row col-md-12 discount-results">
+            <div id="discount-subtotal" class="row col-md-12"></div>
+            <div id="discount-subtotal-after-discount" class="row col-md-12"></div>
+            <div id="discount-total-given-discount" class="row col-md-12"></div>
+        </div>
+        <div id="discount-racking-selection-line-items" class="row col-md-12">
+            <h2 style="">Do you want to add a racking system?</h2>
+            <table id="racking-systems-selection-table">
+                <tr class="racking-selections">
+                    <th>
+                        <input type="radio" id="r1" name="racking-choice" value="r1" />
+                        <label for="r1">XR-10</label>
+                    </th>
+                    <th>
+                        <input type="radio" id="r2" name="racking-choice" value="r2" />
+                        <label for="r2">XR-100</label>
+                    </th>
+                    <th>
+                        <input type="radio" id="r3" name="racking-choice" value="r3" />
+                        <label for="r3">XR-1000</label>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div id="discount-calculator-bottom-action-buttons" class="row col-md-12">
+            {% include "pricing/crm/_discount_calculator_bottom_actions.html" %}
+        </div>
+
+        <div id="discount-calculator-datalists"></div>
+    </div>
+    <script src="{{ static_url | safe }}js/discount_calculator.js"></script>
+
+{% endblock content %}

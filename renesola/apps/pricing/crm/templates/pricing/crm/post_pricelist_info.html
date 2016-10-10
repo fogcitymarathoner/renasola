@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- pricing/crm/pricelist.html -->
+    <div id="in-process" class="hidden-data">
+        <h2>Your Pricelist is being processed</h2>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                60%
+            </div>
+        </div>
+        <h3 id="in-process-message"></h3>
+        <h3 id="in-process-upload-count"></h3>
+        <h3 id="in-process-total"></h3>
+        <h3 id="in-process-upload-date"></h3>
+        <p>Please verify the upload date with today's date and product count with spreadsheet row count</p>
+        <p>If you see a stall, look for errors on Excel pricesheet.  Make sure prices are floating point and </p>
+
+    </div>
+    <div id="finished" class="hidden-data">
+        <h1>Your Pricelist is processed</h1>
+        <h2 id="finished-message"></h2>
+        <h3 id="finished-upload-count"></h3>
+        <h3 id="finished-total"></h3>
+        <h3 id="finished-upload-date"></h3>
+        <p>Please verify the upload date with today's date and product count with spreadsheet row count</p>
+
+    </div>
+    <div id="products"></div>
+    <script src="{{ static_url | safe }}js/pricelist_upload_status.js"></script>
+{% endblock content %}
